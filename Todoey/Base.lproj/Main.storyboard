@@ -31,7 +31,13 @@
                             <outlet property="delegate" destination="U06-k2-FjY" id="YXy-eL-eeg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Todo List" id="mf9-FF-S1O"/>
+                    <navigationItem key="navigationItem" title="Todo List" id="mf9-FF-S1O">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tNe-xY-9GK">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="U06-k2-FjY" id="LRb-0e-5Ia"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tz9-cD-P19" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -45,6 +51,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mf4-ck-xIY">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.20784313730000001" green="0.2156862745" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.20784313730000001" green="0.2156862745" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.20784313730000001" green="0.2156862745" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
