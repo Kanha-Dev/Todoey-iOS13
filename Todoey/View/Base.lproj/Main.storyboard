@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,7 +34,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Todoey" id="GGy-9R-cX2">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="kgs-IM-3Sh">
-                            <color key="tintColor" red="0.47058823529999999" green="0.62745098040000002" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="tintColor" name="BrandAccent"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="6Wp-gB-NaM" id="V2z-tW-wbD"/>
                             </connections>
@@ -80,7 +81,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Item List" id="mf9-FF-S1O">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="tNe-xY-9GK">
-                            <color key="tintColor" red="0.47058823529999999" green="0.62745098040000002" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="tintColor" name="BrandAccent"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="U06-k2-FjY" id="LRb-0e-5Ia"/>
                             </connections>
@@ -99,11 +100,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mf4-ck-xIY">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.20784313730000001" green="0.2156862745" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.47058823529999999" green="0.62745098040000002" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" name="BrandBackground"/>
+                        <color key="tintColor" name="BrandAccent"/>
+                        <color key="barTintColor" name="BrandBackground"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" name="Text"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -117,6 +118,15 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="BrandAccent">
+            <color red="0.47058826679999999" green="0.62745100259999997" blue="0.51372551919999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="BrandBackground">
+            <color red="0.2117646933" green="0.21568629149999999" blue="0.29803922770000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
