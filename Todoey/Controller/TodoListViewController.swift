@@ -38,7 +38,7 @@ class TodoListViewController: SwipeTableViewController {
             title = selectedCategory?.name
             updateNavBarColor(withHexCode: colorHex)
         }
-        tableView.backgroundColor = FlatBlack()
+        tableView.backgroundColor = UIColor(hexString: "000000")
     }
     
     //Hanles the Disappear function for good practice

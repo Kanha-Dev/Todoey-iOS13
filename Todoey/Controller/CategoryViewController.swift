@@ -31,7 +31,7 @@ class CategoryViewController: SwipeTableViewController {
         //Sets up the NavBar
         super.viewWillAppear(animated)
         updateNavBarColor(withHexCode: "36374C")
-        tableView.backgroundColor = FlatBlack()
+        tableView.backgroundColor = UIColor(hexString: "000000")
     }
     
     //Hanles the Disappear function for good practice
