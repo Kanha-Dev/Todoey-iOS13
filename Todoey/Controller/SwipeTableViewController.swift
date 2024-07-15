@@ -9,7 +9,6 @@
 
 import UIKit
 import SwipeCellKit
-//import RealmSwift
 
 class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegate {
     
@@ -29,6 +28,7 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
         return cell
     }
     
+    //SwipeCellKit Library Function
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
         guard orientation == .right else { return nil }
         
@@ -44,7 +44,7 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
         return [deleteAction]
     }
     
-    
+    //SwipeCellKit Library Function
     func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
         var options = SwipeOptions()
         options.expansionStyle = .destructiveAfterFill
@@ -52,6 +52,7 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
         return options
     }
     
+    //Custom Function
     func updateModel(at indexPath: IndexPath) {
         // Update our data model
     }

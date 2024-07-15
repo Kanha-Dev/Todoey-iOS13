@@ -2,17 +2,20 @@
 //  ViewController.swift
 //  Todoey
 //
-//  Created by Philipp Muellauer on 02/12/2019.
-//  Copyright © 2019 App Brewery. All rights reserved.
+//  Created by Kanha Gupta on 15/07/24.
+//  Copyright © 2024 App Brewery. All rights reserved.
 //
     
 import UIKit
 import RealmSwift
+import ChameleonFramework
 
 class TodoListViewController: SwipeTableViewController {
     
     //Initialise Realm
     let realm = try! Realm()
+    //Declearing OBoutlet
+    @IBOutlet weak var searchBar: UISearchBar!
     //Initialise Variables
     var todoItems: Results<Item>?
     var selectedCategory : Category?{
@@ -23,8 +26,56 @@ class TodoListViewController: SwipeTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.separatorStyle = .none
 //        print(dataFilePath)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //Sets up the NavBar
+        if let colorHex = selectedCategory?.colour {
+            title = selectedCategory?.name
+            updateNavBarColor(withHexCode: colorHex)
+        }
+        tableView.backgroundColor = FlatBlack()
+    }
+    
+    //Hanles the Disappear function for good practice
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if let originalColor = UIColor(hexString: "36374C") {
+            updateNavBarColor(withHexCode: originalColor.hexValue())
+        }
+    }
+    
+    //Used for UpdatingNavBarColor
+    func updateNavBarColor(withHexCode colorHexCode: String) {
+        guard let navBar = navigationController?.navigationBar else {
+            fatalError("Navigation controller does not exist.")
+        }
+        if let navBarColor = UIColor(hexString: colorHexCode) {
+            //New Instance
+            let appearance = UINavigationBarAppearance()
+            //Configure Solid Background
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = navBarColor
+            appearance.largeTitleTextAttributes = [.foregroundColor: ContrastColorOf(navBarColor, returnFlat: true)]
+            appearance.titleTextAttributes = [.foregroundColor: ContrastColorOf(navBarColor, returnFlat: true)]
+            
+            //Different State Apprearances
+            navBar.standardAppearance = appearance
+            navBar.scrollEdgeAppearance = appearance
+            navBar.compactAppearance = appearance
+            
+            //Properties
+            navBar.tintColor = ContrastColorOf(navBarColor, returnFlat: true)
+            navBar.isTranslucent = false
+            
+            searchBar.barTintColor = navBarColor
+        }
+    }
+
 
     //MARK: - Table View Datasource Methods
 
@@ -41,14 +92,23 @@ class TodoListViewController: SwipeTableViewController {
         
         //Sets Title and Checkmark for Cell
         if let item = todoItems?[indexPath.row] {
+            
             cell.textLabel?.text = item.title
             cell.accessoryType = item.done ? .checkmark : .none
+            
+            //Setting the color of Item Cells
+            if let color = UIColor(hexString: selectedCategory!.colour)?.darken(byPercentage: CGFloat(indexPath.row) / CGFloat(todoItems!.count)) {
+                cell.backgroundColor = color
+                cell.textLabel?.textColor = ContrastColorOf(color, returnFlat: true)
+            }
         }else{
             cell.textLabel?.text = "No Items Added"
         }
         
         return cell
     }
+    
+    //MARK: - Table View Delegate Methods
     
     //Function for clicking the Todo List Item
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -62,12 +122,14 @@ class TodoListViewController: SwipeTableViewController {
                 print("Error while saving done status \(error)")
             }
         }
+        tableView.reloadData()
+        
         //Animation
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
     
-    //MARK: - Functions
+    //MARK: - IBActions
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         
@@ -110,6 +172,8 @@ class TodoListViewController: SwipeTableViewController {
     }
     
     
+    //MARK: - Database Function
+    
     //Function for Loading Data
     func loadItems(){
         //Loading the Data
@@ -118,6 +182,7 @@ class TodoListViewController: SwipeTableViewController {
         tableView.reloadData()
     }
     
+    //For Deleting an item
     override func updateModel(at indexPath: IndexPath) {
         if let itemForDeletion = todoItems?[indexPath.row]{
             do{
