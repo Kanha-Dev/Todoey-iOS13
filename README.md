@@ -58,18 +58,28 @@ Ensure that you have the latest version of Xcode and Swift installed.
 ## Screenshots
 
 ### Todoey Home Screen (Blank)
+![1](https://github.com/user-attachments/assets/e3af14dd-1085-41ef-ac18-5fefb802f71b)
+
 The initial screen of Todoey where you can view your tasks. This screenshot shows a blank state with no tasks added yet.
 
 ### Categories (Populated)
+![2](https://github.com/user-attachments/assets/939bb68e-cc58-4658-bfc2-7357bbcb20d9)
+
 This screen displays the different categories that the user has created, populated with tasks.
 
 ### Item Screen (Blank)
+![3](https://github.com/user-attachments/assets/022172c2-0374-4ab7-bb34-b6a3fd793bcd)
+
 This is the item screen where you can view tasks within a specific category. This screenshot shows the screen before any tasks are added.
 
 ### Item Screen (Populated)
+![4](https://github.com/user-attachments/assets/502d5211-6fbb-4483-b8be-67259ca825ef)
+
 This screen displays the tasks that have been added within a specific category, showing a populated state.
 
 ### Delete Function (on Item)
+![5](https://github.com/user-attachments/assets/ce75e172-ff34-4436-906f-2ae114402b2e)
+
 Demonstrates the swipe-to-delete functionality, where a user can swipe left on a task to reveal the delete option.
 
 ## Contributing
