@@ -16,7 +16,7 @@ To install and run the Todoey app on your local machine, follow these steps:
 
 ### Clone the Repository:
 ```bash
-git clone https://github.com/yourusername/todoey.git
+git clone https://github.com/Kanha-Dev/Todoey-iOS13.git
 ```
 
 ### Open in Xcode:
