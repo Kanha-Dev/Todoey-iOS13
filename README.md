@@ -73,11 +73,11 @@ This screen displays the tasks that have been added within a specific category, 
 Demonstrates the swipe-to-delete functionality, where a user can swipe left on a task to reveal the delete option.
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between;">
-    <img src="Screenshots/home_screen_blank.png" alt="Home Screen (Blank)" title="Todoey Home Screen (Blank)" style="width: 48%;"/>
-    <img src="Screenshots/categories_populated.png" alt="Categories (Populated)" title="Categories (Populated)" style="width: 48%;"/>
-    <img src="Screenshots/item_screen_blank.png" alt="Item Screen (Blank)" title="Item Screen (Blank)" style="width: 48%;"/>
-    <img src="Screenshots/item_screen_populated.png" alt="Item Screen (Populated)" title="Item Screen (Populated)" style="width: 48%;"/>
-    <img src="Screenshots/delete_function.png" alt="Delete Function (on Item)" title="Delete Function (on Item)" style="width: 48%;"/>
+    <img src="Screenshots/1.png" alt="Home Screen (Blank)" title="Todoey Home Screen (Blank)" style="width: 48%;"/>
+    <img src="Screenshots/2.png" alt="Categories (Populated)" title="Categories (Populated)" style="width: 48%;"/>
+    <img src="Screenshots/3.png" alt="Item Screen (Blank)" title="Item Screen (Blank)" style="width: 48%;"/>
+    <img src="Screenshots/4.png" alt="Item Screen (Populated)" title="Item Screen (Populated)" style="width: 48%;"/>
+    <img src="Screenshots/5.png" alt="Delete Function (on Item)" title="Delete Function (on Item)" style="width: 48%;"/>
 </div>
 
 ## Contributing
