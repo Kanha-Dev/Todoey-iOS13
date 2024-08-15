@@ -20,7 +20,7 @@ git clone https://github.com/Kanha-Dev/Todoey-iOS13.git
 ```
 
 ### Open in Xcode:
-Open the `Todoey.xcodeproj` file in Xcode.
+Open the `Todoey.xcworkspace` file in Xcode.
 
 ### Install Dependencies:
 Ensure that you have the latest version of Xcode and Swift installed.
