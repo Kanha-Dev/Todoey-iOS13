@@ -58,29 +58,27 @@ Ensure that you have the latest version of Xcode and Swift installed.
 ## Screenshots
 
 ### Todoey Home Screen (Blank)
-![1](https://github.com/user-attachments/assets/e3af14dd-1085-41ef-ac18-5fefb802f71b)
-
 The initial screen of Todoey where you can view your tasks. This screenshot shows a blank state with no tasks added yet.
 
 ### Categories (Populated)
-![2](https://github.com/user-attachments/assets/939bb68e-cc58-4658-bfc2-7357bbcb20d9)
-
 This screen displays the different categories that the user has created, populated with tasks.
 
 ### Item Screen (Blank)
-![3](https://github.com/user-attachments/assets/022172c2-0374-4ab7-bb34-b6a3fd793bcd)
-
 This is the item screen where you can view tasks within a specific category. This screenshot shows the screen before any tasks are added.
 
 ### Item Screen (Populated)
-![4](https://github.com/user-attachments/assets/502d5211-6fbb-4483-b8be-67259ca825ef)
-
 This screen displays the tasks that have been added within a specific category, showing a populated state.
 
 ### Delete Function (on Item)
-![5](https://github.com/user-attachments/assets/ce75e172-ff34-4436-906f-2ae114402b2e)
-
 Demonstrates the swipe-to-delete functionality, where a user can swipe left on a task to reveal the delete option.
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between;">
+    <img src="Screenshots/home_screen_blank.png" alt="Home Screen (Blank)" title="Todoey Home Screen (Blank)" style="width: 48%;"/>
+    <img src="Screenshots/categories_populated.png" alt="Categories (Populated)" title="Categories (Populated)" style="width: 48%;"/>
+    <img src="Screenshots/item_screen_blank.png" alt="Item Screen (Blank)" title="Item Screen (Blank)" style="width: 48%;"/>
+    <img src="Screenshots/item_screen_populated.png" alt="Item Screen (Populated)" title="Item Screen (Populated)" style="width: 48%;"/>
+    <img src="Screenshots/delete_function.png" alt="Delete Function (on Item)" title="Delete Function (on Item)" style="width: 48%;"/>
+</div>
 
 ## Contributing
 
